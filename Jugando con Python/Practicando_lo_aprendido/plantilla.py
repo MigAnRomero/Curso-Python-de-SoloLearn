@@ -18,7 +18,7 @@ reloj = 83.75
 lentes_sol = 53.28
 
 #Reto 2 - Pon tu respuesta después de cada print
-print("Lista tres objetos del equipamiento: Nombre y valor", "\nBotella:", botella, "\nAgua:", agua, "\nSnacks:", snacks)
+print("\nLista tres objetos del equipamiento: Nombre y valor", "\nBotella:", botella, "\nAgua:", agua, "\nSnacks:", snacks)
 
 print("¿Puedes combinar elementos de tu equipo para prepararte mejor?")
 
@@ -26,65 +26,79 @@ agua_en_botella = agua + botella
 linterna_funcional = linterna + bateria
 mi_ubicacion = mapa + brujula
 
-print(f"Agua en botella: {agua_en_botella}", f"\nLinterna funcional: {linterna_funcional}", f"\nMi ubicación: {mi_ubicacion}")
+print(f"\nAgua en botella: {agua_en_botella}", f"\nLinterna funcional: {linterna_funcional}", f"\nMi ubicación: {mi_ubicacion}")
 
-print("¿El precio del agua en botella es menor al de la linterna funcional?")
+print("\n¿El precio del agua en botella es menor al de la linterna funcional?")
 print(f"¿El precio del agua en botella < al de la linterna funcional?: {agua_en_botella < linterna_funcional}")
 
-print("¿Cuanto valdría comprar unos snacks y una brujula?")
+print("\n¿Cuanto valdría comprar unos snacks y una brujula?")
 print(f"Precio de una snack más una brújula: {snacks + brujula}")
 
-print("¿Si tienes 100 puntos, te alcanza para comprar unas botas?")
+print("\n¿Si tienes 100 puntos, te alcanza para comprar unas botas?")
 print(f"Respuesta: {botas <= 100} porque las botas tienen {botas} puntos.")
 
 #Clase 2 Proyecto: Tomando decisiones
 
 #Reto 3 - Pon tu respuesta después del print
-print("La esfinge te dice: No debes colocar más de 5 objetos en tu mochila, y tampoco pasarte de 200 trekjuls: ¿Cuales elementos colocarías?")
+print("\nLa esfinge te dice: No debes colocar más de 5 objetos en tu mochila, y tampoco pasarte de 200 trekjuls: ¿Cuales elementos colocarías?")
 
 mochila = 0
 
 # No se elige el mapa si uno puede orientarse con una brújula
+opcion_uno = agua_en_botella + linterna_funcional + brujula + reloj + snacks
+opcion_dos = agua_en_botella + linterna_funcional + brujula + reloj
+opcion_tres = agua_en_botella + linterna_funcional + brujula
 
-if ((agua_en_botella + linterna_funcional + brujula + reloj + snacks) <= 200):
-    mochila = agua_en_botella + linterna_funcional + brujula + reloj + snacks
+if (opcion_uno <= 200):
+    mochila = opcion_uno
     print("El valor de los elementos es menor a 200: ", mochila)
 
-elif ((agua_en_botella + linterna_funcional + brujula + reloj) <= 200):
-    mochila = agua_en_botella + linterna_funcional + brujula + reloj
+elif (opcion_dos <= 200):
+    mochila = opcion_dos
     print("El valor de los elementos es menor a 200", mochila)
 
-elif ((agua_en_botella + linterna_funcional + brujula) <= 200):
-    mochila = agua_en_botella + linterna_funcional + brujula
+elif (opcion_tres <= 200):
+    mochila = opcion_tres
     print("El valor de los elementos es menor a 200. Total compra: ", mochila)
 
 else:
     print("Ups! Ninguna de tus intentos fue exitoso")
 
+print("Valores de la opciones elegidas", f"\nOpción uno: {opcion_uno}", f"\nOpción dos: {opcion_dos}", f"\nOpción tres: {opcion_tres}")
+
 #Reto 4 - Pon tu respuesta después del print
-print ("Es tu dia de suerte! Te voy a dar otra mochila, pero solo puedes agregarle agua en botella")
+print ("\nEs tu dia de suerte! Te voy a dar otra mochila, pero solo puedes agregarle agua en botella")
+mochila_dos = 0
 
+while (mochila_dos <= 200):
+    mochila_dos += agua_en_botella
+    print(f"Mochila dos: {mochila_dos}")
 
-
-
-
+mochila_dos -= agua_en_botella
+print(f"Nos pasamos, vamos a restar una botella de agua, ahora tenemos: {mochila_dos}")
 
 #Clase 3 Proyecto: Almacenando equipamimento
 
 #Reto 4 - Pon tu respuesta después del segundo print
-print("Le hice una actualización a tu mochila te dice la esfinge, porque solo podias conocer el valor de los objetos que tenias")
+print("\nLe hice una actualización a tu mochila te dice la esfinge, porque solo podias conocer el valor de los objetos que tenias")
 print("Ahora sabras el objeto que tienes, la cantidad y su valor unitario, pero tu debes volverla a llenarla")
 
+mochila_actualizada = {
+    "agua_en_botella" : {"cantidad": 1, "valor_unitario": agua_en_botella},
+    "linterna_funcional" : {"cantidad": 1, "valor_unitario": linterna_funcional},
+    "brujula" : {"cantidad": 1, "valor_unitario": brujula}
+}
 
+print("\nMostrar mochila_actualizada: ", mochila_actualizada)
 
+mochila_dos_actualizada = {
+    "agua_en_botella" : {"cantidad": 2, "valor_unitario": agua_en_botella}
+}
 
-
-
-
-
+print("\nMostrar mochila_dos_actualizada: ", mochila_dos_actualizada)
 
 #Reto 5 - Pon tu respuesta después del print
-print("Ahora, en esta aventura te van a acompañar 8 integrantes más, y te voy a pedir que les armes una mochila igual a la tuya y la coloques en el compartimiento de tu vehiculo")
+print("\nAhora, en esta aventura te van a acompañar 8 integrantes más, y te voy a pedir que les armes una mochila igual a la tuya y la coloques en el compartimiento de tu vehiculo")
 
 
 
