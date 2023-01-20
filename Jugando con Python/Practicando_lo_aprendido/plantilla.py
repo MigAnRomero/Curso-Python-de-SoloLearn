@@ -100,19 +100,28 @@ print("\nMostrar mochila_dos_actualizada: ", mochila_dos_actualizada)
 #Reto 5 - Pon tu respuesta después del print
 print("\nAhora, en esta aventura te van a acompañar 8 integrantes más, y te voy a pedir que les armes una mochila igual a la tuya y la coloques en el compartimiento de tu vehiculo")
 
+vehiculo = [{}] * 7
 
+for compartimiento in range(7):
+    vehiculo[compartimiento] = {
+        "agua_en_botella" : {"cantidad": 1, "valor_unitario": agua_en_botella},
+        "linterna_funcional" : {"cantidad": 1, "valor_unitario": linterna_funcional},
+        "brujula" : {"cantidad": 1, "valor_unitario": brujula}
+    }
+    print("Acabas de armar la mochila para el compartimiento: ", compartimiento + 1)
 
+print("")
 
+numero_compartimiento = 0
 
-
-
-
-
+for mochila in vehiculo:
+    numero_compartimiento += 1
+    print(f"Numero de compartimiento {numero_compartimiento} para la mochila: ", mochila, "\n")
 
 
 #Clase 4 Proyecto: Organizandonos un poco
 
 #Reto 6 - Pon tu respuesta después del segundo print
-print("Te pido que para cuatro integrantes recolectes 3 elementos sin importar las cantidades que quieras adicionarles, y te da las siguientes opciones: brujula, linterna_funcional, snacks y agua_en_botella")
+print("\nTe pido que para cuatro integrantes recolectes 3 elementos sin importar las cantidades que quieras adicionarles, y te da las siguientes opciones: brujula, linterna_funcional, snacks y agua_en_botella")
 print("Pero necesito que calcules el total de elementos que hay en tu equipo")
 
