@@ -123,7 +123,7 @@ for mochila in vehiculo:
 
 #Reto 6 - Pon tu respuesta después del segundo print
 print("\nTe pido que para cuatro integrantes recolectes 3 elementos sin importar las cantidades que quieras adicionarles, y te da las siguientes opciones: brujula, linterna_funcional, snacks y agua_en_botella")
-print("Pero necesito que calcules el total de elementos que hay en tu equipo")
+print("Pero necesito que calcules el total de elementos que hay en tu equipo\n")
 
 def agregar_elementos_a_mochilas():  # La función que llama a las otras cuando se usa
     for compartimiento in range(3):
