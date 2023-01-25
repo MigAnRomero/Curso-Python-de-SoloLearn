@@ -139,10 +139,8 @@ def calcularTotalElementosEnMochilas(vehiculo):
 
     print(total_elementos_mochilas)
 
-
 def imprimir(estructura):
     for objeto in estructura:
         print(objeto)
 
 agregarElementosAMochilas()
-

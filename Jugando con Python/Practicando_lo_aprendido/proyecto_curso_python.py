@@ -123,5 +123,34 @@ for mochila in vehiculo:
 
 #Reto 6 - Pon tu respuesta después del segundo print
 print("\nTe pido que para cuatro integrantes recolectes 3 elementos sin importar las cantidades que quieras adicionarles, y te da las siguientes opciones: brujula, linterna_funcional, snacks y agua_en_botella")
-print("Pero necesito que calcules el total de elementos que hay en tu equipo")
+print("Pero necesito que calcules el total de elementos que hay en tu equipo\n")
 
+def agregar_elementos_a_mochilas():  # La función que llama a las otras cuando se usa
+    for compartimiento in range(3):
+        vehiculo[compartimiento] = {
+            "agua_en_botella" : {"cantidad": 1, "valor_unitario": agua_en_botella},
+            "linterna_funcional" : {"cantidad": 2, "valor_unitario": linterna_funcional},
+            "brujula" : {"cantidad": 3, "valor_unitario": brujula},
+            "snacks" : {"cantidad": 2, "valor_unitario": snacks},
+        }
+    imprimir(vehiculo)
+    calcular_total_elementos_en_mochilas(vehiculo)
+
+def calcular_total_elementos_en_mochilas(vehiculo):
+    total_elementos_mochilas = {}
+    
+    print("Calculo elementos en mochila")
+    for mochila in vehiculo: 
+        for elemento, detalle in mochila.items(): 
+            if elemento in total_elementos_mochilas:
+                total_elementos_mochilas[elemento] += detalle["cantidad"]
+            else:
+                total_elementos_mochilas[elemento] = detalle["cantidad"]
+
+    print(total_elementos_mochilas)
+
+def imprimir(estructura):
+    for objeto in estructura:
+        print(objeto, "\n")
+
+agregar_elementos_a_mochilas()
